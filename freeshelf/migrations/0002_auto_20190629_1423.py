@@ -25,9 +25,11 @@ def do_nothing(apps, schema_editor):
 class Migration(migrations.Migration):
 
    dependencies = [
-    #    ('freeshelf', '0002_auto_20190629_1423'),
+       ('freeshelf', '0001_initial'),
    ]
 
    operations = [
        migrations.RunPython(load_initial_data, do_nothing),
    ]
+
+   
